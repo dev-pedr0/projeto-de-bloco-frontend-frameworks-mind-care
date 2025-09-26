@@ -1,19 +1,28 @@
 .App, .container {
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+header, footer {
+    background-color: #204e53;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
 .main {
-    gap: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: justify;
     flex: 1;
+    min-width: 100vw;
 }
 
 h1, h2, h3 {
@@ -23,6 +32,21 @@ h1, h2, h3 {
 
 button {
     cursor: pointer;
+}
+
+.button-sair {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    background-color: #A8D5BA;
+}
+
+.button-sair:hover {
+    background-color: #d2d5a8;
 }
 
 .form-padrao {
@@ -40,4 +64,54 @@ button {
 .erro {
   color: red;
   text-align: "center"; 
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #204e53;
+    padding-bottom: 1rem;
+}
+
+.nav-list li {
+    background-color: #204e53;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.nav-list li:hover {
+    background-color: #d2d5a8;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color: black;
+}
+
+.content-container {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    background-color: #d2d5a8;
+    padding: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
