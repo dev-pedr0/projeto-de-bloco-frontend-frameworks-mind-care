@@ -53,23 +53,23 @@ export default function Home({ onLogout, usuario }) {
     }
 
     return (
-    <div className="container">
-        <header className="header">
-            <h1>MindCare - Um Espaço Acolhedor</h1>
-            <button onClick={onLogout} className="button-sair">
-                Sair
-            </button>
-        </header>
-        <main className="main">
-            <Nav navegacao={navegacao} onSelect={setCurrentPage}/> 
-            <div className="content-container">
-                {renderMainContent()}
-            </div>   
-        </main>
-        <footer>
-            <p>Todos os direitos reservados</p>
-        </footer>
-    </div>
+        <div className="container">
+            <header className="header">
+                <h1>MindCare - Um Espaço Acolhedor</h1>
+                <button onClick={onLogout} className="button-sair">
+                    Sair
+                </button>
+            </header>
+            <main className="main">
+                <Nav navegacao={navegacao} onSelect={setCurrentPage}/> 
+                <div className="content-container">
+                    {renderMainContent()}
+                </div>   
+            </main>
+            <footer>
+                <p>Todos os direitos reservados</p>
+            </footer>
+        </div>
 
   );
 }
