@@ -57,7 +57,7 @@ export default function Home({ onLogout, usuario }) {
             <header className="header">
                 <h1>MindCare - Um Espaço Acolhedor</h1>
                 <button onClick={onLogout} className="button-sair">
-                    Sair
+                    x
                 </button>
             </header>
             <main className="main">
