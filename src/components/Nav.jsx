@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Nav = ({navegacao, onSelect}) => {
+const Nav = ({navegacao}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const  local = useLocation();
 
-  const handleSelect = (index) => {
-    onSelect(index);
+  const handleLinkClick  = (index) => {
     setIsOpen(false);
   };
 
@@ -34,9 +35,13 @@ return (
         <ul className="nav-list">
           {navegacao.map((item, index) => (
             <li key={index}>
-              <a href="#" onClick={() => handleSelect(index)}>
-                {item}
-              </a>
+              <Link
+                to={item.rota}
+                className={local.pathname === item.rota ? "ativo" : ""}
+                onClick={handleLinkClick}
+              >
+                {item.nome}
+              </Link>
             </li>
           ))}
         </ul>
@@ -45,9 +50,13 @@ return (
       <ul className="nav-list desktop">
         {navegacao.map((item, index) => (
           <li key={index}>
-            <a href="#" onClick={() => handleSelect(index)}>
-              {item}
-            </a>
+            <Link
+                to={item.rota}
+                className={local.pathname === item.rota ? "ativo" : ""}
+                onClick={handleLinkClick}
+              >
+                {item.nome}
+              </Link>
           </li>
         ))}
       </ul>

@@ -31,15 +31,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
 
-          <Route path="/home" element={<AppRoutes />} />
-
-          <Route path="/home/consultas" element={<ConsultasPage/>} />
-          <Route path="/home/progresso" element={<ProgressoPage />} />
-          <Route path="/home/documentos" element={<DocumentosPage />} />
-          <Route path="/home/conversa" element={<ConversaPage />} />
-          <Route path="/home/horarios" element={<HorariosPage />} />
-          <Route path="/home/anotacoes" element={<AnotacoesPage />} />
-        </Routes>
+          <Route path="/home" element={<AppRoutes />}>
+            <Route path="consultas" element={<ConsultasPage/>} />
+            <Route path="progresso" element={<ProgressoPage />} />
+            <Route path="documentos" element={<DocumentosPage />} />
+            <Route path="conversa" element={<ConversaPage />} />
+            <Route path="horarios" element={<HorariosPage />} />
+            <Route path="anotacoes" element={<AnotacoesPage />} />
+            <Route index element={<Navigate to="documentos" />} />
+          </Route>
+        </Routes> 
       </BrowserRouter>
     </UsuarioProvider>
     
