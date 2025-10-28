@@ -1,11 +1,11 @@
 import Nav from "../components/Nav";
-import Horarios from "./Horarios";
-import Consultas from "./Consultas";
+import Horarios from "../components/profissional/Horarios";
+import Consultas from "../components/paciente/Consultas";
 import { useState } from "react";
-import Anotacoes from "./Anotacoes";
-import Progresso from "./Progresso";
-import Documentos from "./Documentos";
-import Conversa from "./Conversa";
+import Anotacoes from "../components/profissional/Anotacoes";
+import Progresso from "../components/paciente/Progresso";
+import Documentos from "../components/Documentos";
+import Conversa from "../components/Conversa";
 
 
 export default function Home({ onLogout, usuario }) {
