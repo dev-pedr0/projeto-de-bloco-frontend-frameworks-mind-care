@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useState } from "react"
 import '../App.css'
+import { useNavigate } from "react-router-dom"
+import usuariosFake from "../data/UsuariosFake"
 
-export default function Cadastro({onRegisterSuccess}) {
+export default function Cadastro() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [countryState, setCountryState] = useState("");
     const [city, setCity] = useState("");
     const [senha, setSenha] = useState("");
-    const [tipoUsuario, setTipoUsuario] = useState(""); 
+    const [tipoUsuario, setTipoUsuario] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onRegisterSuccess();
+        const novoUsuario = {
+            id: usuariosFake.length + 1,
+            tipo: tipoUsuario,
+            nome,
+            email,
+            senha,
+            phone,
+            estado: countryState,
+            cidade: city,
+        };
+        usuariosFake.push(novoUsuario);
+
+        alert("Cadastro realizado com sucesso! Faça login para continuar.");
+        navigate("/login");
     };
 
     return (
-        <div>
+        <div className="container">
             <form className="form-padrao" onSubmit={handleSubmit}>
                 <h2>Boas Vindas ao MindCare</h2>
                 <h3>Preencha os Dados Abaixo</h3>
