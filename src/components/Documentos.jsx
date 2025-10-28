@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Documentos = () => {
   const [documentos, setDocumentos] = useState([]);
@@ -8,6 +8,13 @@ const Documentos = () => {
     arquivo: null,
   });
 
+  useEffect(() => {
+    fetch("http://localhost:3001/documentos")
+      .then(res => res.json())
+      .then(data => setDocumentos(data))
+      .catch(err => console.error("Erro ao carregar documentos:", err));
+  }, []);
+
   const handleAddDocumento = (e) => {
     e.preventDefault();
 
@@ -16,7 +23,17 @@ const Documentos = () => {
       return;
     }
 
-    setDocumentos([...documentos, novoDocumento]);
+    fetch("http://localhost:3001/documentos", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nome: novoDocumento.nome,
+        descricao: novoDocumento.descricao,
+        arquivo: novoDocumento.arquivo.name
+      })
+    })
+      .then(res => res.json())
+      .then(data => setDocumentos([...documentos, data]));
 
     setNovoDocumento({ nome: "", descricao: "", arquivo: null });
   };
@@ -32,8 +49,7 @@ const Documentos = () => {
           <ul>
             {documentos.map((doc, index) => (
               <li key={index}>
-                <strong>{doc.nome}</strong> - {doc.descricao} -{" "}
-                {doc.arquivo.name}
+                <strong>{doc.nome}</strong> - {doc.descricao} - {doc.arquivo}
               </li>
             ))}
           </ul>

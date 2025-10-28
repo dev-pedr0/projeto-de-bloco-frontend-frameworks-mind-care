@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Consultas = () => {
   const [consultas, setConsultas] = useState([]);
@@ -8,6 +8,13 @@ const Consultas = () => {
     horario: "",
     medico: "",
   });
+
+  useEffect(() => {
+    fetch("http://localhost:3001/consultas")
+      .then((res) => res.json())
+      .then((data) => setConsultas(data))
+      .catch((err) => console.error("Erro ao carregar consultas:", err));
+  }, []);
   
   const handleAddConsulta = (e) => {
     e.preventDefault();
@@ -17,7 +24,13 @@ const Consultas = () => {
       return;
     }
 
-    setConsultas([...consultas, novaConsulta]);
+    fetch("http://localhost:3001/consultas", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(novaConsulta),
+    })
+      .then((res) => res.json())
+      .then((nova) => setConsultas([...consultas, nova]));
 
     setNovaConsulta({ data: "", horario: "", medico: "" });
   }

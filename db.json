@@ -1,0 +1,24 @@
+{
+  "consultas": [
+    {
+      "id": 1,
+      "data": "2025-10-30",
+      "horario": "10:00",
+      "medico": "Dra. Maria Oliveira"
+    }
+  ],
+  "documentos": [
+    {
+      "id": 1,
+      "nome": "Ficha Inicial",
+      "descricao": "Ficha de avaliação inicial do paciente",
+      "arquivo": "ficha_inicial.pdf"
+    },
+    {
+      "id": 2,
+      "nome": "Relatório Semanal",
+      "descricao": "Resumo da evolução da semana",
+      "arquivo": "relatorio_semana.pdf"
+    }
+  ]
+}
