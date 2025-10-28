@@ -1,12 +1,10 @@
-# React + Vite
+# Projeto de Bloco: Desenvolvimento Front-end com Frameworks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## TP3
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Atualizações do código:
+Todas as páginas utilizam o React Router para mudança de páginas.
+É usado o useContext para dar acesso a todas as páginas ao usuário logado e fazer verificações do tipo de usuário e se há um usuário logado.
+As páginas de Consultas, Horários, Documentos usam uma API local através do db.json. Ao rodar o projeto ele já roda os servidores locais.
+As páginas de Progresso, Anotações usam API's públicas.
+O artefato Backlog está presente no arquivo Backlog.txt
