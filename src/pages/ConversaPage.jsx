@@ -1,8 +1,9 @@
 import React from 'react'
+import Conversa from "../components/Conversa"
 
 const ConversaPage = () => {
   return (
-    <div>ConversaPage</div>
+    <Conversa/>
   )
 }
 

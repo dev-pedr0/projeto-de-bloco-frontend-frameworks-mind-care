@@ -1,8 +1,9 @@
 import React from 'react'
+import Documentos from "../components/Documentos"
 
 const DocumentosPage = () => {
   return (
-    <div>DocumentosPage</div>
+    <Documentos/>
   )
 }
 

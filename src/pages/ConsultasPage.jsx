@@ -1,8 +1,9 @@
 import React from 'react'
+import Consultas from "../components/paciente/Consultas"
 
 const ConsultasPage = () => {
   return (
-    <div>ConsultasPage</div>
+    <Consultas/>
   )
 }
 
