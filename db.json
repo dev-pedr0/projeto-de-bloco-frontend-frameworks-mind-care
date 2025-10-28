@@ -20,5 +20,31 @@
       "descricao": "Resumo da evolução da semana",
       "arquivo": "relatorio_semana.pdf"
     }
+  ],
+  "horarios": [
+    {
+      "id": 1,
+      "data": "2025-10-30",
+      "horario": "09:00",
+      "disponivel": true
+    },
+    {
+      "id": 2,
+      "data": "2025-10-30",
+      "horario": "10:30",
+      "disponivel": false
+    },
+    {
+      "id": 3,
+      "data": "2025-10-31",
+      "horario": "14:00",
+      "disponivel": true
+    },
+    {
+      "id": 4,
+      "data": "2025-10-31",
+      "horario": "15:30",
+      "disponivel": true
+    }
   ]
 }

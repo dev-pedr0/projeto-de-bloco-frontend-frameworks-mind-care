@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Horarios = () => {
   const [horarios, setHorarios] = useState([]);
@@ -7,6 +7,13 @@ const Horarios = () => {
       data: "",
       horario: "",
     });
+
+    useEffect(() => {
+    fetch("http://localhost:3001/horarios")
+      .then((res) => res.json())
+      .then((data) => setHorarios(data))
+      .catch((err) => console.error("Erro ao carregar horários:", err));
+  }, []);
 
     const handleAddHorario = (e) => {
       e.preventDefault();
