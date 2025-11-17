@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import '../App.css'
 import { Link, useNavigate } from "react-router-dom"
 import usuariosFake from "../data/UsuariosFake"
 import { useUser } from "../context/UsuarioContext"
+import { useSwipeable } from "react-swipeable"
 
 export default function Login({ onLogin }) {
     const [email, setEmail] = useState("");
@@ -10,6 +11,9 @@ export default function Login({ onLogin }) {
     const [erro, setErro] = useState("");
     const navigate = useNavigate();
     const { login } = useUser();
+
+    const emailRef = useRef(null);
+    const senhaRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,12 +31,21 @@ export default function Login({ onLogin }) {
         }
     };
 
+    const mobileHandlers = useSwipeable({
+        onSwipedUp: () => emailRef.current?.focus(),
+        onSwipedDown: () => {
+            emailRef.current?.blur();
+            senhaRef.current?.blur();  
+        }
+    })
+
     return (
-        <div className="container">
+        <div {...mobileHandlers} className="container">
             <form className="form-padrao" onSubmit={handleSubmit}>
                 <h2>Boas Vindas ao MindCare</h2>
                 <h3>Realize seu Login</h3>
                 <input
+                    ref={emailRef}
                     type="email"
                     placeholder="Digite seu email"
                     value={email}
@@ -40,6 +53,7 @@ export default function Login({ onLogin }) {
                     required
                 />
                 <input
+                    ref={senhaRef}
                     type="password"
                     placeholder="Digite sua senha"
                     value={senha}

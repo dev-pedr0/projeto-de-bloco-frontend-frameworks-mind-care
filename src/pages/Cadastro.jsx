@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import '../App.css'
 import { useNavigate } from "react-router-dom"
 import usuariosFake from "../data/UsuariosFake"
+import { useSwipeable } from "react-swipeable";
 
 export default function Cadastro() {
     const [nome, setNome] = useState("");
@@ -12,6 +13,11 @@ export default function Cadastro() {
     const [senha, setSenha] = useState("");
     const [tipoUsuario, setTipoUsuario] = useState("");
     const navigate = useNavigate();
+
+    const firstInputRef = useRef(null);
+    const inputsRefs = [
+        firstInputRef,
+    ];
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -31,12 +37,19 @@ export default function Cadastro() {
         navigate("/login");
     };
 
+    const mobileHandlers = useSwipeable({
+        onSwipedUp: () => firstInputRef.current?.focus(),
+        onSwipedDown: () => inputsRefs.forEach(ref => ref.current?.blur()),
+        onSwipedRight: () => navigate("/login")
+    });
+
     return (
-        <div className="container">
+        <div {...mobileHandlers} className="container">
             <form className="form-padrao" onSubmit={handleSubmit}>
                 <h2>Boas Vindas ao MindCare</h2>
                 <h3>Preencha os Dados Abaixo</h3>
                 <input
+                    ref={firstInputRef}
                     type="text"
                     placeholder="Digite seu nome"
                     value={nome}

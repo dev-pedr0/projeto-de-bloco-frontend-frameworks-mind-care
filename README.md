@@ -13,8 +13,21 @@ O artefato Backlog está presente no arquivo Backlog.txt
 
 Solicitações:
 Menu de navegação - já existente
+
 Gestures na versão mobile - pendente
+
 Mobile feito react native - pendente
-Listar componentes a serem modificados - pendente
+
+Listar componentes a serem modificados:
+- Login.tsx: swipe up and down para mostrar e sumir o teclado em mobile.
+- Cadastro: swipe up and down para mostrar e sumir o teclado em mobile. Swipe left para voltar ao login.
+-Home.jsx: swipe left e right para mudar de página com gestos.
+
 Revisar backlog - pendente
+- Criação de utils/menuOrder e hooks/useSwipeNavigation para fazer a mudança de telas com o gesto em mobile - OK
+- Ajustar tamanho das páginas para telas maiores - Pendente
+- Adição de filtros em Consultas, Progresso e Horários.
+- Permissão de novos chats de conversa.
+- Verificação de segurança de acesso aos chats.
+
 Consruir testes com React Testing Library - pendente

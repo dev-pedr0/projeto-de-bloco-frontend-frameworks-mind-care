@@ -1,10 +1,12 @@
 import { Outlet, useNavigate } from "react-router-dom"
 import { useUser } from "../context/UsuarioContext"
 import Nav from "../components/Nav";
+import { useSwipeNavigation } from "../hooks/useSwipeNavigation";
 
 export default function Home() {
     const { usuario, logout } = useUser();
     const navigate = useNavigate();
+    const mobileHandlers = useSwipeNavigation();
 
     if (!usuario) {
         navigate("/login");
@@ -27,7 +29,7 @@ export default function Home() {
         ];
 
     return (
-        <div className="container">
+        <div {...mobileHandlers} className="container">
             <header className="header">
                 <h1>MindCare - Um Espaço Acolhedor</h1>
                  <button onClick={logout} className="button-sair">
