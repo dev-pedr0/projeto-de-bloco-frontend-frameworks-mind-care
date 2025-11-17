@@ -8,3 +8,13 @@ Todas as páginas utilizam o React Router para mudança de páginas.
 As páginas de Consultas, Horários, Documentos usam uma API local através do db.json. Ao rodar o projeto ele já roda os servidores locais.
 As páginas de Progresso, Anotações usam API's públicas.
 O artefato Backlog está presente no arquivo Backlog.txt
+
+## TP4
+
+Solicitações:
+Menu de navegação - já existente
+Gestures na versão mobile - pendente
+Mobile feito react native - pendente
+Listar componentes a serem modificados - pendente
+Revisar backlog - pendente
+Consruir testes com React Testing Library - pendente
