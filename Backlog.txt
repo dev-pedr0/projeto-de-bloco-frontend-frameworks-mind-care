@@ -1,8 +1,4 @@
-Testes:
-    Verificar restrição de páginas.
-    Verificar limite das APIs utilizadas.
-
-Funcionalidades:
-    Adição de filtros em Consultas, Progresso e Horários.
-    Permissão de novos chats de conversa.
-    Verificação de segurança de acesso aos chats.
+- Ajustar tamanho das páginas para telas maiores - Pendente
+- Adição de filtros em Consultas, Progresso e Horários - Pendente
+- Permissão de novos chats de conversa - Pendente
+- Site feito nativamente em mobile - Pendente

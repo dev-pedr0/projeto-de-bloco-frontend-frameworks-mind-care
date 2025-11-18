@@ -1,5 +1,28 @@
 # Projeto de Bloco: Desenvolvimento Front-end com Frameworks
 
+Siga os passos para clonar e rodar o código:
+```bash
+# Clonar o repositório
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+# Entrar na pasta
+cd SEU_REPOSITORIO
+
+# Instalar dependências (escolha um)
+npm install
+# ou
+yarn
+# ou
+pnpm install
+
+# Rodar o projeto
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+```
+
 ## TP3
 
 Atualizações do código:
@@ -14,20 +37,18 @@ O artefato Backlog está presente no arquivo Backlog.txt
 Solicitações:
 Menu de navegação - já existente
 
-Gestures na versão mobile - pendente
-
-Mobile feito react native - pendente
+Gestures na versão mobile - OK
 
 Listar componentes a serem modificados:
 - Login.tsx: swipe up and down para mostrar e sumir o teclado em mobile.
 - Cadastro: swipe up and down para mostrar e sumir o teclado em mobile. Swipe left para voltar ao login.
--Home.jsx: swipe left e right para mudar de página com gestos.
+- Home.jsx: swipe left e right para mudar de página com gestos.
 
 Revisar backlog - pendente
 - Criação de utils/menuOrder e hooks/useSwipeNavigation para fazer a mudança de telas com o gesto em mobile - OK
+- Realização de testes de login e acesso a paginas - OK
+- Verificação de segurança de acesso aos chats - OK
 - Ajustar tamanho das páginas para telas maiores - Pendente
-- Adição de filtros em Consultas, Progresso e Horários.
-- Permissão de novos chats de conversa.
-- Verificação de segurança de acesso aos chats.
-
-Consruir testes com React Testing Library - pendente
+- Adição de filtros em Consultas, Progresso e Horários - Pendente
+- Permissão de novos chats de conversa - Pendente
+- Site feito nativamente em mobile - Pendente
