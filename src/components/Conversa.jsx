@@ -17,6 +17,16 @@ const Conversa = () => {
     setMensagem("");
   };
 
+  const handleNovaConversa = () => {
+    if (conversa.length > 0) {
+      if (!confirm("Tem certeza que deseja iniciar uma nova conversa? A atual será apagada.")) {
+        return;
+      }
+    }
+    setConversa([]);
+    setMensagem("");
+  }
+
   return (
     <section>
       <div className='container-chat'>
@@ -34,6 +44,14 @@ const Conversa = () => {
           Enviar
         </button>
       </form>
+
+      <div>
+        <button
+          onClick={handleNovaConversa}
+        >
+          Nova Conversa
+        </button>
+      </div>
     </section>
   )
 }

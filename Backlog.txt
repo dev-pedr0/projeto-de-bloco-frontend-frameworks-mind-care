@@ -1,4 +1,4 @@
-- Ajustar tamanho das páginas para telas maiores - Pendente
-- Adição de filtros em Consultas, Progresso e Horários - Pendente
-- Permissão de novos chats de conversa - Pendente
+- Ajustar tamanho das páginas para telas maiores - Concluído
+- Adição de filtros em Consultas, Progresso e Horários - Concluído
+- Permissão de novos chats de conversa - Concluído
 - Site feito nativamente em mobile - Pendente

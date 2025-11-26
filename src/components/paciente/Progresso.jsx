@@ -4,13 +4,16 @@ const Progresso = () => {
   const [anotacoes, setAnotacoes] = useState([]);
   const [novaAnotacao, setNovaAnotacao] = useState({ nome: "", atividade: "" });
   const [editIndex, setEditIndex] = useState(null);
+  const [filtroTitulo, setFiltroTitulo] = useState("");
+  const [filtroAtividade, setFiltroAtividade] = useState("");
 
   useEffect(() => {
     const fetchAnotacoes = async () => {
       try {
         const response = await fetch('https://dummyjson.com/todos');
         const data = await response.json();
-        setAnotacoes(data.todos);
+        const comAtividade = data.todos.map(t => ({ ...t, atividade: "" }));
+        setAnotacoes(comAtividade);
       } catch (error) {
         console.error('Erro ao buscar anotações:', error);
       }
@@ -18,6 +21,13 @@ const Progresso = () => {
 
     fetchAnotacoes();
   }, []);
+
+  const anotacoesFiltradas = anotacoes.filter(a => {
+    const matchTitulo = a.todo.toLowerCase().includes(filtroTitulo.toLowerCase());
+    const matchAtividade = !novaAnotacao.atividade ||
+      a.atividade?.toLowerCase().includes(filtroAtividade.toLowerCase());
+    return matchTitulo && matchAtividade;
+  });
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,12 +62,27 @@ const Progresso = () => {
     <section>
       <h2>Progresso</h2>
 
+      <div className="container-filtro">
+        <input
+          type="text"
+          placeholder="Filtrar por título..."
+          value={filtroTitulo}
+          onChange={(e) => setFiltroTitulo(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Filtrar por atividade..."
+          value={filtroAtividade}
+          onChange={(e) => setFiltroAtividade(e.target.value)}
+        />
+      </div>
+
       <div>
-        {anotacoes.length === 0 ? (
+        {anotacoesFiltradas.length === 0 ? (
           <p>Nenhuma anotação ainda.</p>
         ): (
           <ul className='list'>
-            {anotacoes.map((a, index) => (
+            {anotacoesFiltradas.map((a, index) => (
               <li key={index}>
                 <span><strong>{a.todo}:</strong> {a.completed ? 'Concluída' : 'Pendente'}</span>
                 <button onClick={() => handleEditar(index)}>Editar</button>

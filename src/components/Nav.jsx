@@ -11,13 +11,15 @@ const Nav = ({navegacao}) => {
 
 return (
     <nav className="nav-container">
-      <button
-        className="menu-toggle"
-        onClick={() => setIsOpen(true)}
-        aria-label="Abrir menu"
-      >
-        ☰
-      </button>
+      {!isOpen && (
+        <button
+          className="menu-toggle"
+          onClick={() => setIsOpen(true)}
+          aria-label="Abrir menu"
+        >
+          ☰
+        </button>
+      )}
 
       <div
         className={`overlay ${isOpen ? "show" : ""}`}

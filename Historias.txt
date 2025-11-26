@@ -1,0 +1,68 @@
+1. Gestão de Perfil de Paciente
+Como um Paciente
+Quero ter um perfil específico de paciente
+Para poder agendar consultas com Terapeutas adequados, acompanhar meu progresso terapêutico, organizar documentos das consultas e possuir um canal seguro de conversa com meu terapeuta.
+Teste de Aceitação:
+- O Cadastro deve exigir as informações: nome, e-mail, telefone, endereço (estado e cidade), senha.
+- A senha precisa ter 8 caracteres, pelo menos um número, uma letra maiúscula e um caractere especial.
+
+2. Gestão de Perfil de Terapeuta
+Como um Terapeuta
+Quero ter um perfil específico de terapeuta
+Para poder disponibilizar horários de consultas, poder fazer registros e anotações sobre cada consulta com pacientes, poder me comunicar de forma segura com pacientes, e organizar documentos e recibos de cada paciente.
+Teste de Aceitação:
+- O Cadastro deve exigir as informações: nome, e-mail, telefone, endereço (estado e cidade), senha, abordagem terapêutica.
+- A senha precisa ter 8 caracteres, pelo menos um número, uma letra maiúscula e um caractere especial.
+
+3. Disponibilização de Horários
+Como um Terapeuta
+Quero poder disponibilizar horários para consultas
+Para que eu possa definir meus horários disponíveis e que pacientes possam marcar consultas nesses horários.
+Teste de Aceitação:
+- A disponibilização de horário precisa das informações de data e horário.
+
+4. Agendamento de Consultas
+Como um Paciente
+Quero poder agendas consultas com terapeutas
+Para que eu possa realizar minhas consultas de terapia.
+
+5. Criação de Sessões com Pacientes
+Como um Terapeuta
+Quero que sejam criadas sessões para cada paciente meu
+Para eu poder centralizar o envio de documentos, fazer anotações sobre o paciente e possa ter um canal de comunicação segura com o paciente.
+Teste de Aceitação:
+- A sessão precisa sempre autenticar usuários tentando acessa-la. Ela só pode permitir a entrada do terapeuta e paciente específicos
+
+6. Criação de Chat Seguro
+Como um Terapeuta ou Paciente
+Quero que exista em cada sessão um chat seguro entre o terapeuta e paciente da sessão
+Para que os dois possam se comunicar fora dos horários de consulta para retirada de dúvidas de forma segura e privada
+
+7. Criação de Progresso Terapêutico
+Como Terapeuta
+Quero poder criar uma lista do progresso terapêutico de cada paciente
+Para que eu possa acompanhar o que já foi conquistado por ele, para que eu possa informar os próximos passos e para que o paciente possa visualizar seu progresso
+
+8. Visualização do Progresso Terapêutico
+Como Paciente
+Quero poder visualizar meu progresso terapêutico
+Para poder entender meu avanço durante as consultas com o terapeuta.
+
+9. Gerenciamento de Anotações
+Como Terapeuta
+Quero poder fazer anotações em cada consulta com um paciente e salvar na sessão correspondente
+Para que eu possa organizar as informações de cada paciente de forma organizada
+
+10. Envio de Documentos
+Como Terapeuta
+Quero poder enviar documentos para uma sessão com um paciente
+Para que eu possa gerenciar os documentos de cada paciente de forma mais organizada e que os pacientes possam visualizar esses documentos com facilidade
+
+11. Visualização de Documentos
+Como Paciente
+Quero poder visualizar os documentos enviados pelo terapeuta
+Para poder realizar pagamentos e solicitar reembolso para plano de saúde
+
+As histórias de usuário estão organizadas por prioridade.
+
+Obs: Professor não sei o que modificar aqui, eu fiz todas as histórias de usuário
