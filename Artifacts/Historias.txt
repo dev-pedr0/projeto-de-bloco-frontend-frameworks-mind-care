@@ -63,6 +63,17 @@ Como Paciente
 Quero poder visualizar os documentos enviados pelo terapeuta
 Para poder realizar pagamentos e solicitar reembolso para plano de saúde
 
-As histórias de usuário estão organizadas por prioridade.
+12. Navegação Fácil
+Como paciente e terapeuta
+Quero poder navegar facilmente entreas diversas páginas do site
+Para poder acessar suas funcionalidades sem dificuldade
 
-Obs: Professor não sei o que modificar aqui, eu fiz todas as histórias de usuário
+13. Gestos Mobile
+Como paciente e terapeuta
+Quero que o site na versão mobile permita gestos usados em celulares
+Para que eu tenha familiaridade e facilidade na navegação
+
+14. Versão mobile
+Como paciente e terapeuta
+Quero uma versão mobile do site
+Para que ele funcione sem problemas ou travamentos em meu celular

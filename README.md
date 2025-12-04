@@ -56,5 +56,10 @@ Revisar backlog - pendente
 ## TP5
 - Feita primeiras páginas da versão mobile
 - Backlog concluído
-- Link da versão mobiule: https://github.com/dev-pedr0/projeto-de-bloco-frontend-frameworks-mind-care-mobile
+- Link da versão mobile: https://github.com/dev-pedr0/projeto-de-bloco-frontend-frameworks-mind-care-mobile
 - Uso de camêra e mudança nos tipos de botão da versão android e IOS
+
+OBS: a pasta artifacts contém todos os outros artefatos do projeto:
+- Backlog -> lista de atividades concluídas e pendentes por ordem de prioridade
+- Histórias -> lista das histórias dos usuários atualizadas
+- Modificações -> indicação de modificações em componentes prontos devido a mudanças de escopo do cliente

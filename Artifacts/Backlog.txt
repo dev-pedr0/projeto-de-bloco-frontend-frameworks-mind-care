@@ -1,0 +1,28 @@
+Backlog de Atividades por prioridade:
+
+- Site feito nativamente em mobile - Em Agendamento
+    Nova versão do site feita em react native está em andamento. Telas de login, cadastro e inicial já estão prontas
+
+- Desenvolvimento inicial do site seguindo mobile-first - Concluído
+    O site possui: tela de cadastro, login, tela inicial, telas voltadas para o paciente, terapeuta e menu de navegação
+
+- Ajustar tamanho das páginas para telas maiores - Concluído
+    O site está adaptado a todos os tipos de tela
+
+- Adição de filtros em Consultas, Progresso e Horários - Concluído
+    Elementos podem ser filtrados para facilitar a busca
+
+- Permissão de novos chats de conversa - Concluído
+    Novas conversas podem ser abertas entre terapeutas e clientes
+
+- Adição de gestos com o dedo para versão mobile - Concluído
+    Gestos dão maior familiaridade no uso dosite em celulares
+
+- Páginas do site com autenticação de tupo de usuário - Concluído
+    Site já possui sistema de autenticação de tipo de usuário ao realizar login permitindo acesso apenas as páginas relacionadas
+
+- Site mobile utlizando recursos do celular - Concluído
+    Na versão mobile o site permite utilização da câmera para tirar uma foto para o perfil do usuário
+
+- Site adaptado para maior eficiencia entre android e ios - Concluído
+    Formatação dos botões desenvolvidas separadamente pra funcionar melhor em cada sistema operacional

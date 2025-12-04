@@ -1,0 +1,6 @@
+Componentes modificações após TP4:
+
+Modificações necessárias por mudança de escopo e solicitação do uso de gestos com o dedo para versão mobile:
+- Login.tsx: swipe up and down para mostrar e sumir o teclado em mobile.
+- Cadastro: swipe up and down para mostrar e sumir o teclado em mobile. Swipe left para voltar ao login.
+- Home.jsx: swipe left e right para mudar de página com gestos.
