@@ -25,18 +25,22 @@ Teste de Aceitação:
 Como um Paciente
 Quero poder agendas consultas com terapeutas
 Para que eu possa realizar minhas consultas de terapia.
+Teste de Aceitação:
+- Os horários que um pacientep ode marcar devem ser validados com o horário disponível do terapeuta
 
 5. Criação de Sessões com Pacientes
 Como um Terapeuta
-Quero que sejam criadas sessões para cada paciente meu
+Quero criar sessões de terapia para cada paciente meu
 Para eu poder centralizar o envio de documentos, fazer anotações sobre o paciente e possa ter um canal de comunicação segura com o paciente.
 Teste de Aceitação:
 - A sessão precisa sempre autenticar usuários tentando acessa-la. Ela só pode permitir a entrada do terapeuta e paciente específicos
 
-6. Criação de Chat Seguro
+6. Criação de Chat
 Como um Terapeuta ou Paciente
-Quero que exista em cada sessão um chat seguro entre o terapeuta e paciente da sessão
+Quero criar a cada sessão um chat entre o terapeuta e paciente da sessão
 Para que os dois possam se comunicar fora dos horários de consulta para retirada de dúvidas de forma segura e privada
+Teste de Aceitação:
+- O chat deve ter encriptação end-to-end
 
 7. Criação de Progresso Terapêutico
 Como Terapeuta
@@ -48,7 +52,7 @@ Como Paciente
 Quero poder visualizar meu progresso terapêutico
 Para poder entender meu avanço durante as consultas com o terapeuta.
 
-9. Gerenciamento de Anotações
+9. Criação de Anotações
 Como Terapeuta
 Quero poder fazer anotações em cada consulta com um paciente e salvar na sessão correspondente
 Para que eu possa organizar as informações de cada paciente de forma organizada
@@ -62,18 +66,3 @@ Para que eu possa gerenciar os documentos de cada paciente de forma mais organiz
 Como Paciente
 Quero poder visualizar os documentos enviados pelo terapeuta
 Para poder realizar pagamentos e solicitar reembolso para plano de saúde
-
-12. Navegação Fácil
-Como paciente e terapeuta
-Quero poder navegar facilmente entreas diversas páginas do site
-Para poder acessar suas funcionalidades sem dificuldade
-
-13. Gestos Mobile
-Como paciente e terapeuta
-Quero que o site na versão mobile permita gestos usados em celulares
-Para que eu tenha familiaridade e facilidade na navegação
-
-14. Versão mobile
-Como paciente e terapeuta
-Quero uma versão mobile do site
-Para que ele funcione sem problemas ou travamentos em meu celular
