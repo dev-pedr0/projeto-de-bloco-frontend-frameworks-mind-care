@@ -1,4 +1,4 @@
-Componentes modificações após TP4:
+Componentes modificados após TP4:
 
 Modificações necessárias por mudança de escopo e solicitação do uso de gestos com o dedo para versão mobile:
 - Login.tsx: swipe up and down para mostrar e sumir o teclado em mobile.
