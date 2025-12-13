@@ -1,4 +1,4 @@
-1. Gestão de Perfil de Paciente
+1. Cadastro de Paciente
 Como um Paciente
 Quero ter um perfil específico de paciente
 Para poder agendar consultas com Terapeutas adequados, acompanhar meu progresso terapêutico, organizar documentos das consultas e possuir um canal seguro de conversa com meu terapeuta.
@@ -6,7 +6,7 @@ Teste de Aceitação:
 - O Cadastro deve exigir as informações: nome, e-mail, telefone, endereço (estado e cidade), senha.
 - A senha precisa ter 8 caracteres, pelo menos um número, uma letra maiúscula e um caractere especial.
 
-2. Gestão de Perfil de Terapeuta
+2. Cadastro de Terapeuta
 Como um Terapeuta
 Quero ter um perfil específico de terapeuta
 Para poder disponibilizar horários de consultas, poder fazer registros e anotações sobre cada consulta com pacientes, poder me comunicar de forma segura com pacientes, e organizar documentos e recibos de cada paciente.
